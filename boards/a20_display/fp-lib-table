@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name liteon)(type KiCad)(uri "$(KIPRJMOD)/liteon.pretty")(options "")(descr ""))
+  (lib (name te_logos)(type KiCad)(uri /Volumes/Jumbo/Users/gtaubman/Desktop/te_logos)(options "")(descr ""))
+)

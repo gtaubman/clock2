@@ -1,0 +1,218 @@
+(pcb /Volumes/Jumbo/Users/gtaubman/clock2/boards/a20_display/a20_display.dsn
+  (parser
+    (string_quote ")
+    (space_in_quoted_tokens on)
+    (host_cad "KiCad's Pcbnew")
+    (host_version "4.0.2-stable")
+  )
+  (resolution um 10)
+  (unit um)
+  (structure
+    (layer F.Cu
+      (type signal)
+      (property
+        (index 0)
+      )
+    )
+    (layer B.Cu
+      (type signal)
+      (property
+        (index 1)
+      )
+    )
+    (boundary
+      (path pcb 0  133350 -106680  130810 -121920  133350 -124460  186690 -124460
+            189230 -121920  186690 -106680  133350 -106680  133350 -106680)
+    )
+    (keepout "" (polygon signal 0  187579 -115570  187574 -115459  187560 -115349  187536 -115241
+            187502 -115136  187460 -115033  187409 -114935  187349 -114842
+            187282 -114754  187207 -114672  187125 -114597  187037 -114530
+            186944 -114470  186846 -114419  186743 -114377  186638 -114343
+            186530 -114319  186420 -114305  186309 -114300  186198 -114305
+            186088 -114319  185980 -114343  185875 -114377  185772 -114419
+            185674 -114470  185581 -114530  185493 -114597  185411 -114672
+            185336 -114754  185269 -114842  185209 -114935  185158 -115033
+            185116 -115136  185082 -115241  185058 -115349  185044 -115459
+            185039 -115570  185044 -115681  185058 -115791  185082 -115899
+            185116 -116004  185158 -116107  185209 -116205  185269 -116298
+            185336 -116386  185411 -116468  185493 -116543  185581 -116610
+            185674 -116670  185772 -116721  185875 -116763  185980 -116797
+            186088 -116821  186198 -116835  186309 -116840  186420 -116835
+            186530 -116821  186638 -116797  186743 -116763  186846 -116721
+            186944 -116670  187037 -116610  187125 -116543  187207 -116468
+            187282 -116386  187349 -116298  187409 -116205  187460 -116107
+            187502 -116004  187536 -115899  187560 -115791  187574 -115681))
+    (keepout "" (polygon signal 0  135001 -115570  134996 -115459  134982 -115349  134958 -115241
+            134924 -115136  134882 -115033  134831 -114935  134771 -114842
+            134704 -114754  134629 -114672  134547 -114597  134459 -114530
+            134366 -114470  134268 -114419  134165 -114377  134060 -114343
+            133952 -114319  133842 -114305  133731 -114300  133620 -114305
+            133510 -114319  133402 -114343  133297 -114377  133194 -114419
+            133096 -114470  133003 -114530  132915 -114597  132833 -114672
+            132758 -114754  132691 -114842  132631 -114935  132580 -115033
+            132538 -115136  132504 -115241  132480 -115349  132466 -115459
+            132461 -115570  132466 -115681  132480 -115791  132504 -115899
+            132538 -116004  132580 -116107  132631 -116205  132691 -116298
+            132758 -116386  132833 -116468  132915 -116543  133003 -116610
+            133096 -116670  133194 -116721  133297 -116763  133402 -116797
+            133510 -116821  133620 -116835  133731 -116840  133842 -116835
+            133952 -116821  134060 -116797  134165 -116763  134268 -116721
+            134366 -116670  134459 -116610  134547 -116543  134629 -116468
+            134704 -116386  134771 -116298  134831 -116205  134882 -116107
+            134924 -116004  134958 -115899  134982 -115791  134996 -115681))
+    (via "Via[0-1]_600:400_um")
+    (rule
+      (width 250)
+      (clearance 200.1)
+      (clearance 200.1 (type default_smd))
+      (clearance 50 (type smd_smd))
+    )
+  )
+  (placement
+    (component "liteon:LTD-2601WC"
+      (place AFF1 143510 -115570 front 0 (PN "LTD-2601WC"))
+      (place AFF2 160020 -115570 front 0 (PN "LTD-2601WC"))
+      (place AFF3 176530 -115570 front 0 (PN "LTD-2601WC"))
+    )
+    (component Pin_Headers:Pin_Header_Straight_1x14
+      (place P1 143510 -108585 back 90 (PN CONN_01X14))
+    )
+    (component te_logos:te_13mm_width
+      (place G*** 160000 -122500 front 0 (PN LOGO))
+    )
+  )
+  (library
+    (image "liteon:LTD-2601WC"
+      (outline (path signal 150  -7620 -5080  7620 -5080))
+      (outline (path signal 150  -7620 -5080  -7620 5080))
+      (outline (path signal 150  7620 -5080  -7620 -5080))
+      (outline (path signal 150  7620 5080  7620 -5080))
+      (outline (path signal 150  7620 -5080  7620 5080))
+      (outline (path signal 150  -7620 5080  7620 5080))
+      (pin Round[A]Pad_1524_um 1 -5080 -3810)
+      (pin Round[A]Pad_1524_um 2 -2540 -3810)
+      (pin Round[A]Pad_1524_um 3 0 -3810)
+      (pin Round[A]Pad_1524_um 4 2540 -3810)
+      (pin Round[A]Pad_1524_um 5 5080 -3810)
+      (pin Round[A]Pad_1524_um 6 5080 3810)
+      (pin Round[A]Pad_1524_um 7 2540 3810)
+      (pin Round[A]Pad_1524_um 8 0 3810)
+      (pin Round[A]Pad_1524_um 9 -2540 3810)
+      (pin Round[A]Pad_1524_um 10 -5080 3810)
+    )
+    (image Pin_Headers:Pin_Header_Straight_1x14
+      (outline (path signal 50  -1750 1750  -1750 -34800))
+      (outline (path signal 50  1750 1750  1750 -34800))
+      (outline (path signal 50  -1750 1750  1750 1750))
+      (outline (path signal 50  -1750 -34800  1750 -34800))
+      (outline (path signal 150  -1270 -1270  -1270 -34290))
+      (outline (path signal 150  -1270 -34290  1270 -34290))
+      (outline (path signal 150  1270 -34290  1270 -1270))
+      (outline (path signal 150  1550 1550  1550 0))
+      (outline (path signal 150  1270 -1270  -1270 -1270))
+      (outline (path signal 150  -1550 0  -1550 1550))
+      (outline (path signal 150  -1550 1550  1550 1550))
+      (pin Rect[A]Pad_2032x1727.2_um 1 0 0)
+      (pin Oval[A]Pad_2032x1727.2_um 2 0 -2540)
+      (pin Oval[A]Pad_2032x1727.2_um 3 0 -5080)
+      (pin Oval[A]Pad_2032x1727.2_um 4 0 -7620)
+      (pin Oval[A]Pad_2032x1727.2_um 5 0 -10160)
+      (pin Oval[A]Pad_2032x1727.2_um 6 0 -12700)
+      (pin Oval[A]Pad_2032x1727.2_um 7 0 -15240)
+      (pin Oval[A]Pad_2032x1727.2_um 8 0 -17780)
+      (pin Oval[A]Pad_2032x1727.2_um 9 0 -20320)
+      (pin Oval[A]Pad_2032x1727.2_um 10 0 -22860)
+      (pin Oval[A]Pad_2032x1727.2_um 11 0 -25400)
+      (pin Oval[A]Pad_2032x1727.2_um 12 0 -27940)
+      (pin Oval[A]Pad_2032x1727.2_um 13 0 -30480)
+      (pin Oval[A]Pad_2032x1727.2_um 14 0 -33020)
+    )
+    (image te_logos:te_13mm_width
+    )
+    (padstack Round[A]Pad_1524_um
+      (shape (circle F.Cu 1524))
+      (shape (circle B.Cu 1524))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_2032x1727.2_um
+      (shape (path F.Cu 1727.2  -152.4 0  152.4 0))
+      (shape (path B.Cu 1727.2  -152.4 0  152.4 0))
+      (attach off)
+    )
+    (padstack Rect[A]Pad_2032x1727.2_um
+      (shape (rect F.Cu -1016 -863.6 1016 863.6))
+      (shape (rect B.Cu -1016 -863.6 1016 863.6))
+      (attach off)
+    )
+    (padstack "Via[0-1]_600:400_um"
+      (shape (circle F.Cu 600))
+      (shape (circle B.Cu 600))
+      (attach off)
+    )
+  )
+  (network
+    (net SegE
+      (pins AFF1-1 AFF2-1 AFF3-1 P1-11)
+    )
+    (net SegD
+      (pins AFF1-2 AFF2-2 AFF3-2 P1-10)
+    )
+    (net SegC
+      (pins AFF1-3 AFF2-3 AFF3-3 P1-9)
+    )
+    (net SegG
+      (pins AFF1-4 AFF2-4 AFF3-4 P1-13)
+    )
+    (net SegP
+      (pins AFF1-5 AFF2-5 AFF3-5 P1-14)
+    )
+    (net Digit2Power
+      (pins AFF1-6 P1-2)
+    )
+    (net SegA
+      (pins AFF1-7 AFF2-7 AFF3-7 P1-7)
+    )
+    (net SegB
+      (pins AFF1-8 AFF2-8 AFF3-8 P1-8)
+    )
+    (net Digit1Power
+      (pins AFF1-9 P1-1)
+    )
+    (net SegF
+      (pins AFF1-10 AFF2-10 AFF3-10 P1-12)
+    )
+    (net Digit4Power
+      (pins AFF2-6 P1-4)
+    )
+    (net Digit3Power
+      (pins AFF2-9 P1-3)
+    )
+    (net Digit6Power
+      (pins AFF3-6 P1-6)
+    )
+    (net Digit5Power
+      (pins AFF3-9 P1-5)
+    )
+    (class kicad_default "" SegA SegB SegC SegD SegE SegF SegG SegP
+      (circuit
+        (use_via Via[0-1]_600:400_um)
+      )
+      (rule
+        (width 250)
+        (clearance 200.1)
+      )
+    )
+    (class POWER Digit1Power Digit2Power Digit3Power Digit4Power Digit5Power
+      Digit6Power
+      (circuit
+        (use_via Via[0-1]_600:400_um)
+      )
+      (rule
+        (width 300)
+        (clearance 200.1)
+      )
+    )
+  )
+  (wiring
+  )
+)
