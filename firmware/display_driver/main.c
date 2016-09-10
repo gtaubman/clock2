@@ -1,4 +1,5 @@
 #include <avr/io.h>
+#include "usitwislave.h"
 
 typedef struct digit {
   unsigned int a : 1;
@@ -58,8 +59,8 @@ Digit* digits[11] = {
 #define LATCH_LOW() (SDL_PORT &= ~(1 << SDL_PIN))
 #define LATCH_HIGH() (SDL_PORT |= 1 << SDL_PIN)
 
-volatile int decimal_place = 0;
-volatile int decimal_direction = 1;
+volatile int time[6] = {0, 0, 0, 0, 0, 0};
+volatile uint8_t decimal_places = 0;
 
 void set_digit(int digit_number, int digit_value) {
   // Set the clock low to start with.
@@ -70,12 +71,11 @@ void set_digit(int digit_number, int digit_value) {
 
   // Shift out the digit value data first.
   for (int i = 7; i >= 0; --i) {
-    if (i == 7 && digit_number == decimal_place) {
-      DATA_HIGH();
-    } else {
+    // TODO(gtaubman): The first bit out is whether or not the decimal place
+    // should be active.
+
     // Reinterpret our digit struct as an int to pull out each segment's bit.
     (*((uint8_t*) digits[digit_value]) & (1 << i)) ? DATA_HIGH() : DATA_LOW();
-    }
     CLOCK_HIGH();
     CLOCK_LOW();
   }
@@ -91,63 +91,38 @@ void set_digit(int digit_number, int digit_value) {
   LATCH_LOW();
 }
 
-volatile int time[6] = {0, 0, 0, 0, 0, 0};
+void idle_callback() {
+  // Loop through and display all the digits.
+  for (int i = 0; i < 6; ++i) {
+    set_digit(i, time[i]);
+  }
+}
+
+void data_callback(uint8_t input_buffer_length, const uint8_t* input_buffer,
+                   uint8_t *output_buffer_length, uint8_t *output_buffer) {
+  *output_buffer_length = 0;
+
+  // Read at most 6 values from the i2c transaction.
+  for (int i = 0; i < 6 && i < input_buffer_length; ++i) {
+    time[i] = input_buffer[i];
+  }
+
+  // TODO(gtaubman): Also read an optional 7th bit containing a bit mask of
+  // where the decimal points should go.
+}
 
 int main(void) {
-  // Make the serial control ports all output pins.
+  // Make the serial control ports all output pins.  use_twi_slave() will set up
+  // the directions for the i2c pins appropriately so there's no need to do that
+  // here.
   DDRB |= 1 << SDA_PIN;
   DDRB |= 1 << CLK_PIN;
   DDRB |= 1 << SDL_PIN;
 
-  int dc = 0;
+  const uint8_t slave_address = 27;
+  const uint8_t use_sleep = 0;
 
-  while (1) {
-    // Loop through and display all the digits.
-    for (int i = 0; i < 6; ++i) {
-      set_digit(i, time[i]);
-    }
-
-    if (dc % 50 == 0) {
-    ++time[5];
-    }
-    if (time[5] > 9) {
-      time[5] = 0;
-      ++time[4];
-    }
-    if (time[4] > 9) {
-      time[4] = 0;
-      ++time[3];
-    }
-    if (time[3] > 9) {
-      time[3] = 0;
-      ++time[2];
-    }
-    if (time[2] > 9) {
-      time[2] = 0;
-      ++time[1];
-    }
-    if (time[1] > 9) {
-      time[1] = 0;
-      ++time[0];
-    }
-
-    if (time[0] > 9) {
-      time[0] = 0;
-    }
-
-    if (++dc > 500) {
-      decimal_place += decimal_direction;
-      dc = 0;
-      if (decimal_place >= 5) {
-        decimal_place = 5;
-        decimal_direction = -1;
-      }
-      if (decimal_place <= 0) {
-        decimal_place = 0;
-        decimal_direction = 1;
-      }
-    }
-  }
+  usi_twi_slave(slave_address, use_sleep, &data_callback, &idle_callback);
 
   return 0;
 }
