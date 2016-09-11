@@ -31,7 +31,7 @@ LIBS:valves
 LIBS:ESP8266
 LIBS:cb2-cache
 LIBS:lcdb4-cache
-LIBS:A20Clock_Logic-cache
+LIBS:logic-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1192,8 +1192,6 @@ Wire Wire Line
 Wire Wire Line
 	625  6025 625  6225
 Wire Wire Line
-	625  6225 1450 6225
-Wire Wire Line
 	6275 6575 6375 6575
 Wire Wire Line
 	6375 6575 6375 6500
@@ -1295,4 +1293,19 @@ Text GLabel 2225 4650 3    60   Input ~ 0
 ESP_TX
 Wire Wire Line
 	2225 4650 2225 4450
+$Comp
+L R R?
+U 1 1 57D47C26
+P 1025 6225
+F 0 "R?" V 1105 6225 50  0000 C CNN
+F 1 "10k" V 1025 6225 50  0000 C CNN
+F 2 "" V 955 6225 50  0000 C CNN
+F 3 "" H 1025 6225 50  0000 C CNN
+	1    1025 6225
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	625  6225 875  6225
+Wire Wire Line
+	1175 6225 1450 6225
 $EndSCHEMATC
