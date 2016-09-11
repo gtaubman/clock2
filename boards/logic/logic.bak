@@ -1294,16 +1294,4 @@ CONN_TX
 Text GLabel 3175 4725 3    60   Input ~ 0
 CONN_RX
 NoConn ~ 3375 4350
-Wire Wire Line
-	2875 4350 2875 4525
-Wire Wire Line
-	3075 4350 3075 4525
-Wire Wire Line
-	3175 4350 3175 4725
-Wire Wire Line
-	3275 4350 3275 4425
-Wire Wire Line
-	3275 4425 3300 4425
-Wire Wire Line
-	3300 4425 3300 4525
 $EndSCHEMATC
