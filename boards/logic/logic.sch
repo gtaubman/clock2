@@ -838,44 +838,11 @@ F 3 "" H 3750 4700 50  0000 C CNN
 	1    3750 4700
 	1    0    0    -1  
 $EndComp
-$Comp
-L ZENER D?
-U 1 1 57754907
-P 1800 5150
-F 0 "D?" H 1800 5250 50  0000 C CNN
-F 1 "ZENER" H 1800 5050 50  0000 C CNN
-F 2 "" H 1800 5150 50  0000 C CNN
-F 3 "" H 1800 5150 50  0000 C CNN
-	1    1800 5150
-	0    1    1    0   
-$EndComp
-Text GLabel 1800 4450 1    60   Input ~ 0
+Text GLabel 1800 4475 1    60   Input ~ 0
 CONN_TX
-Text GLabel 2225 4450 1    60   Input ~ 0
+Text GLabel 2025 4475 1    60   Input ~ 0
 CONN_RX
-$Comp
-L R R?
-U 1 1 57754CBA
-P 1800 4750
-F 0 "R?" V 1880 4750 50  0000 C CNN
-F 1 "220" V 1800 4750 50  0000 C CNN
-F 2 "" V 1730 4750 50  0000 C CNN
-F 3 "" H 1800 4750 50  0000 C CNN
-	1    1800 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR?
-U 1 1 57755002
-P 1800 5400
-F 0 "#PWR?" H 1800 5150 50  0001 C CNN
-F 1 "GND" H 1800 5250 50  0000 C CNN
-F 2 "" H 1800 5400 50  0000 C CNN
-F 3 "" H 1800 5400 50  0000 C CNN
-	1    1800 5400
-	1    0    0    -1  
-$EndComp
-Text GLabel 1975 4825 1    60   Input ~ 0
+Text GLabel 1800 4675 3    60   Input ~ 0
 ESP_RX
 Wire Wire Line
 	7750 4050 7750 5050
@@ -1278,21 +1245,10 @@ Wire Wire Line
 Wire Wire Line
 	1550 875  1650 875 
 Connection ~ 1600 875 
-Wire Wire Line
-	1800 4450 1800 4600
-Wire Wire Line
-	1800 4925 1975 4925
-Wire Wire Line
-	1800 4900 1800 4950
-Connection ~ 1800 4925
-Wire Wire Line
-	1800 5350 1800 5400
-Wire Wire Line
-	1975 4925 1975 4825
-Text GLabel 2225 4650 3    60   Input ~ 0
+Text GLabel 2025 4675 3    60   Input ~ 0
 ESP_TX
 Wire Wire Line
-	2225 4650 2225 4450
+	2025 4675 2025 4475
 $Comp
 L R R?
 U 1 1 57D47C26
@@ -1308,4 +1264,6 @@ Wire Wire Line
 	625  6225 875  6225
 Wire Wire Line
 	1175 6225 1450 6225
+Wire Wire Line
+	1800 4475 1800 4675
 $EndSCHEMATC
