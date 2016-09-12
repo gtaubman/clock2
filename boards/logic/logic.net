@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /Volumes/Jumbo/Users/gtaubman/clock2/boards/logic/logic.sch)
-    (date "Sunday, September 11, 2016 'PMt' 02:32:43 PM")
+    (date "Sunday, September 11, 2016 'PMt' 09:53:39 PM")
     (tool "Eeschema 4.0.2-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -29,7 +29,7 @@
       (tstamp 5761D903))
     (comp (ref BT1)
       (value Battery)
-      (footprint Connect:CR1220)
+      (footprint open-project:BAT_CR1216)
       (libsource (lib device) (part Battery))
       (sheetpath (names /) (tstamps /))
       (tstamp 5761D98D))
