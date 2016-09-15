@@ -21,8 +21,18 @@
       )
     )
     (boundary
-      (path pcb 0  121285 -67945  121285 -144145  169545 -144145  169545 -67945
-            121285 -67945  121285 -67945)
+      (path pcb 0  121285 -84455  121285 -142875  121304 -143096  121362 -143309
+            121455 -143510  121582 -143691  121739 -143848  121920 -143975
+            122121 -144068  122334 -144126  122555 -144145  168275 -144145
+            168496 -144126  168709 -144068  168910 -143975  169091 -143848
+            169248 -143691  169375 -143510  169468 -143309  169526 -143096
+            169545 -142875  169545 -84455  169526 -84234.5  169468 -84020.6
+            169375 -83820  169248 -83638.7  169091 -83482.1  168910 -83355.1
+            168709 -83261.6  168496 -83204.3  168275 -83185  149225 -83185
+            148590 -83820  132715 -83820  132080 -83185  122555 -83185  122334 -83204.3
+            122121 -83261.6  121920 -83355.1  121739 -83482.1  121582 -83638.7
+            121455 -83820  121362 -84020.6  121304 -84234.5  121285 -84455
+            121285 -84455)
     )
     (via "Via[0-1]_600:400_um")
     (rule
@@ -37,21 +47,21 @@
       (place IC1 160020 -125730 front 0 (PN ATTINY85))
     )
     (component Capacitors_ThroughHole:C_Disc_D3_P2.5
-      (place C1 160655 -99695 front 0 (PN 0.1uF))
-      (place C2 132080 -90170 front 90 (PN 0.1uF))
+      (place C1 151130 -104775 front 0 (PN 0.1uF))
+      (place C2 130175 -103505 front 90 (PN 0.1uF))
       (place C5 124460 -122555 front 0 (PN 0.1uF))
       (place C6 154305 -122555 front 0 (PN 0.1uF))
       (place C7 165100 -122555 front 180 (PN 0.1uF))
     )
     (component Capacitors_ThroughHole:C_Radial_D5_L6_P2.5
-      (place C3 124460 -95250 front 0 (PN 10uF))
-      (place C4 124460 -87630 front 0 (PN 10uF))
+      (place C3 128905 -107950 front 0 (PN 10uF))
+      (place C4 123190 -107950 front 0 (PN 10uF))
     )
     (component Pin_Headers:Pin_Header_Straight_1x02
-      (place P1 124460 -71120 front 90 (PN 5V_IN))
+      (place P1 123825 -102870 front 90 (PN 5V_IN))
     )
     (component Pin_Headers:Pin_Header_Straight_1x06
-      (place P2 153670 -90170 front 90 (PN PROG_CONN))
+      (place P2 153670 -99695 front 90 (PN PROG_CONN))
     )
     (component Pin_Headers:Pin_Header_Straight_1x14
       (place P3 128905 -142240 front 90 (PN DSPLY_CONN))
@@ -66,11 +76,11 @@
     )
     (component Resistors_ThroughHole:Resistor_Horizontal_RM10mm
       (place R1 157480 -116205 front 0 (PN 10k))
-      (place R2 137160 -90170 front 0 (PN 10k))
-      (place R3 137160 -93345 front 0 (PN 10k))
-      (place R4 137160 -96520 front 0 (PN 10k))
-      (place R5 137160 -99695 front 0 (PN 10k))
-      (place R6 137160 -102870 front 0 (PN 10k))
+      (place R2 134620 -117475 front 90 (PN 10k))
+      (place R3 137795 -117475 front 90 (PN 10k))
+      (place R4 140970 -117475 front 90 (PN 10k))
+      (place R5 144145 -117475 front 90 (PN 10k))
+      (place R6 147320 -117475 front 90 (PN 10k))
       (place R9 167640 -119380 front 180 (PN 10k))
       (place R10 130810 -133985 front 90 (PN 1k))
       (place R11 133985 -133985 front 90 (PN 1k))
@@ -81,28 +91,28 @@
       (place R16 149860 -133985 front 90 (PN 1k))
     )
     (component Resistors_ThroughHole:Resistor_Horizontal_RM7mm
-      (place R7 137160 -106045 front 0 (PN 4.7k))
-      (place R8 137160 -109220 front 0 (PN 4.7k))
+      (place R7 150495 -117475 front 90 (PN 4.7k))
+      (place R8 153670 -117475 front 90 (PN 4.7k))
     )
     (component Buttons_Switches_ThroughHole:SW_PUSH_SMALL
-      (place SW1 164465 -83820 front 0 (PN FLASH))
-      (place SW2 154940 -83820 front 0 (PN RST))
+      (place SW1 126365 -87630 front 0 (PN FLASH))
+      (place SW2 126365 -95885 front 0 (PN RST))
     )
     (component "Housings_SOIC:SOIC-16_7.5x10.3mm_Pitch1.27mm"
       (place U1 162130 -108585 front 0 (PN DS3231))
     )
     (component "ESP8266:ESP-12E"
-      (place U2 132715 -70485 front 0 (PN "ESP-12E"))
+      (place U2 132715 -86360 front 0 (PN "ESP-12E"))
     )
     (component "TO_SOT_Packages_SMD:SOT-223"
-      (place U3 125730 -77470 front 0 (PN LD1117S33TR))
+      (place U3 126365 -114935 front 90 (PN LD1117S33TR))
     )
     (component "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm"
       (place U4 125095 -129540 front 0 (PN TLC5916))
       (place U5 154940 -129540 front 0 (PN 74HC595))
     )
     (component "open-project:BAT_CR1216"
-      (place BT1 160020 -73660 front 180 (PN Battery))
+      (place BT1 159385 -90170 front 180 (PN Battery))
     )
   )
   (library

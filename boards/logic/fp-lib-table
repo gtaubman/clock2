@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name ESP8266)(type KiCad)(uri "$(KIPRJMOD)/kicad-ESP8266/ESP8266.pretty")(options "")(descr ""))
   (lib (name open-project)(type Legacy)(uri /Volumes/Jumbo/Users/gtaubman/Desktop/kicadlibrary/open-project.mod)(options "")(descr ""))
+  (lib (name myelin-kicad)(type KiCad)(uri /Volumes/Jumbo/Users/gtaubman/Desktop/myelin-kicad.pretty)(options "")(descr ""))
 )
