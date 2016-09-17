@@ -3,7 +3,7 @@
   (general
     (links 117)
     (no_connects 116)
-    (area 121.209999 88.824999 169.620001 146.760001)
+    (area 97.104287 47.403566 203.751257 163.830001)
     (thickness 1.6)
     (drawings 29)
     (tracks 0)
@@ -278,11 +278,11 @@
       (net 1 "Net-(BT1-Pad1)"))
   )
 
-  (module Connect:1pin locked (layer F.Cu) (tedit 57DA158B) (tstamp 57E17F38)
+  (module Connect:1pin locked (layer F.Cu) (tedit 57DDADA3) (tstamp 57E17F38)
     (at 166.37 130.81)
     (descr "module 1 pin (ou trou mecanique de percage)")
     (tags DEV)
-    (fp_text reference REF** (at 0 -3.048) (layer F.SilkS) hide
+    (fp_text reference REF1 (at 0 -3.048) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 1pin (at 0 2.794) (layer F.Fab) hide
@@ -1732,11 +1732,11 @@
       (net 3 +3V3))
   )
 
-  (module Connect:1pin locked (layer F.Cu) (tedit 57DA1588) (tstamp 57DA1330)
+  (module Connect:1pin locked (layer F.Cu) (tedit 57DDADAD) (tstamp 57DA1330)
     (at 124.46 96.52)
     (descr "module 1 pin (ou trou mecanique de percage)")
     (tags DEV)
-    (fp_text reference REF** (at 0 -3.048) (layer F.SilkS) hide
+    (fp_text reference REF2 (at 0 -3.048) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 1pin (at 0 2.794) (layer F.Fab) hide
