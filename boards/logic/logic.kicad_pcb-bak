@@ -1653,7 +1653,7 @@
     (tags "SOIC 1.27")
     (path /5761DFE9)
     (attr smd)
-    (fp_text reference U5 (at -2.954 -6.096 360) (layer F.SilkS)
+    (fp_text reference U5 (at 2.8778 6.0198 360) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 74HC595 (at 0 0 270) (layer F.SilkS)
