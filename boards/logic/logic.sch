@@ -39,7 +39,7 @@ encoding utf-8
 Sheet 1 1
 Title "Wifi Clock Logic Board"
 Date "2016-09-12"
-Rev "1"
+Rev "2"
 Comp "Taubman Electronics"
 Comment1 "Drawn by G. Taubman"
 Comment2 ""
@@ -688,7 +688,7 @@ $EndComp
 Text GLabel 3225 2300 1    60   Input ~ 0
 I2C_DATA
 Text GLabel 3100 2300 1    60   Input ~ 0
-I2C_DATA
+I2C_CLCK
 NoConn ~ 1700 2375
 $Comp
 L +3.3V #PWR020
