@@ -34,6 +34,13 @@
             121455 -89535  121362 -89735.6  121304 -89949.5  121285 -90170
             121285 -142875  121285 -142875)
     )
+    (plane GND (polygon F.Cu 0  122022 -89585.8  168250 -89357.2  169266 -90195.4  169266 -144882
+            169291 -145694  168859 -146253  168046 -146380  167005 -146482
+            148133 -146533  122377 -146456  121920 -146279  121412 -145491
+            121463 -90144.6))
+    (plane GND (polygon B.Cu 0  122072 -89484.2  168199 -89382.6  169291 -90220.8  169316 -145669
+            168402 -146533  122453 -146558  121895 -146304  121412 -145491
+            121463 -90144.6))
     (keepout "" (polygon F.Cu 0  166878 -112522  166878 -122936  159512 -122936  159512 -112522))
     (keepout "" (polygon B.Cu 0  166878 -122936  159512 -122936  159512 -112522  166878 -112522
             166878 -122936))
@@ -73,7 +80,7 @@
       (place IC1 160528 -137668 front 0 (PN "ATTINY85-S"))
     )
     (component Capacitors_ThroughHole:C_Disc_D3_P2.5
-      (place C1 165648 -110490 front 0 (PN 0.1uF))
+      (place C1 161595 -110744 front 0 (PN 0.1uF))
       (place C2 150154 -110617 front 0 (PN 0.1uF))
       (place C5 153797 -134620 front 0 (PN 0.1uF))
       (place C6 124968 -134366 front 0 (PN 0.1uF))
@@ -136,6 +143,10 @@
     )
     (component "myelin-kicad:SOT-223-LDO-1117LV"
       (place U3 136384 -94309 front 0 (PN LD1117S33TR))
+    )
+    (component te_logos:te_22mm_width
+      (place G1 137414 -116967 back 0 (PN LOGO))
+      (place G2 137516 -120472 back 0 (PN LOGO))
     )
   )
   (library
@@ -464,6 +475,8 @@
       (pin Rect[T]Pad_1250x2550_um 3 2300 -3100)
       (pin Rect[T]Pad_3650x2550_um 2@1 0 3100)
     )
+    (image te_logos:te_22mm_width
+    )
     (padstack Round[T]Pad_10200.6_um
       (shape (circle F.Cu 10200.6))
       (attach off)
@@ -583,13 +596,13 @@
       (pins IC1-3 U4-4 U5-12)
     )
     (net I2C_DATA
-      (pins IC1-5 R7-2 U1-15 U1-16 U2-19)
+      (pins IC1-5 R7-2 U1-15 U2-19)
     )
     (net DISPLAY_SERIAL_CLOCK
       (pins IC1-6 U4-3 U5-11)
     )
     (net I2C_CLCK
-      (pins IC1-7 R8-2 U2-20)
+      (pins IC1-7 R8-2 U1-16 U2-20)
     )
     (net "Net-(P2-Pad2)"
       (pins P2-2)
@@ -777,33 +790,46 @@
     )
   )
   (wiring
-    (wire (path F.Cu 500  126111 -102870  127127 -103886  134366 -103886  135494 -102758
-            136144 -102108)(net GND)(type protect))
-    (wire (path F.Cu 500  134084 -97409  134084 -102682  133558 -103208  131148 -103208
-            130698 -102758  130048 -102108)(net GND)(type protect))
-    (wire (path F.Cu 500  134084 -97409  134084 -100048  136144 -102108)(net GND)(type protect))
-    (wire (path F.Cu 500  121686 -136169  121686 -137668  121686 -144869)(net +3V3)(type protect))
-    (wire (path F.Cu 500  122936 -138049  122067 -138049  121686 -137668)(net +3V3)(type protect))
-    (wire (path F.Cu 500  124968 -134366  123489 -134366  121686 -136169)(net +3V3)(type protect))
-    (wire (path F.Cu 500  121686 -144869  122486 -145669  122936 -145669)(net +3V3)(type protect))
-    (wire (path F.Cu 500  158418 -114681  157968 -114681  157168 -115481  157168 -116561
-            157828 -117221  158418 -117221)(net +3V3)(type protect))
-    (wire (path F.Cu 500  157968 -117221  158418 -117221)(net +3V3)(type protect))
-    (wire (path F.Cu 500  165648 -110490  155843 -110490  154507 -111826  154507 -113218)(net +3V3)(type protect))
-    (wire (path F.Cu 500  157168 -114681  158418 -114681)(net +3V3)(type protect))
-    (wire (path F.Cu 500  154507 -113218  155970 -114681  157168 -114681)(net +3V3)(type protect))
-    (wire (path F.Cu 500  158868 -117221  158418 -117221)(net +3V3)(type protect))
-    (wire (path F.Cu 500  136384 -91209  134059 -91209  132548 -92720  132548 -100958
-            132548 -102108)(net +3V3)(type protect))
-    (wire (path F.Cu 500  152654 -110617  152654 -106300  151792 -105438)(net +3V3)(type protect))
-    (wire (path F.Cu 500  165100 -137668  168148 -137668)(net +3V3)(type protect))
-    (wire (path F.Cu 500  158623 -131191  165100 -137668)(net +3V3)(type protect))
-    (wire (path F.Cu 500  156972 -131191  158623 -131191)(net +3V3)(type protect))
+    (wire (path F.Cu 500  168308 -117221  167718 -117221)(net GND)(type protect))
+    (wire (path F.Cu 500  158418 -119761  158418 -118491)(net GND)(type protect))
+    (wire (path F.Cu 500  158418 -121031  158418 -119761)(net GND)(type protect))
+    (wire (path F.Cu 500  158418 -122301  158418 -121031)(net GND)(type protect))
+    (wire (path F.Cu 500  167718 -122301  158418 -122301)(net GND)(type protect))
+    (wire (path F.Cu 500  167718 -122301  167718 -121031)(net GND)(type protect))
+    (wire (path F.Cu 500  167718 -119761  167718 -121031)(net GND)(type protect))
+    (wire (path F.Cu 500  167718 -118491  167718 -119761)(net GND)(type protect))
+    (wire (path F.Cu 500  167718 -118491  167718 -117221)(net GND)(type protect))
+    (wire (path F.Cu 500  167792 -106488  167792 -105438)(net GND)(type protect))
+    (wire (path F.Cu 500  165442 -108838  167792 -106488)(net GND)(type protect))
+    (wire (path F.Cu 500  156505 -108838  165442 -108838)(net GND)(type protect))
+    (wire (path F.Cu 500  153626 -111717  156505 -108838)(net GND)(type protect))
+    (wire (path F.Cu 500  151254 -111717  153626 -111717)(net GND)(type protect))
+    (wire (path F.Cu 500  150154 -110617  151254 -111717)(net GND)(type protect))
+    (wire (path F.Cu 500  122936 -141859  123386 -141859  126818 -138427  126818 -135016
+            127468 -134366)(net GND)(type protect))
+    (wire (path F.Cu 500  128336 -136779  128336 -135234  127468 -134366)(net GND)(type protect))
+    (wire (path F.Cu 500  158418 -117221  158868 -117221  159668 -116421  159668 -114681)(net +3V3)(type protect))
+    (wire (path F.Cu 500  158418 -114681  159668 -114681  161595 -112754  161595 -111894
+            161595 -110744)(net +3V3)(type protect))
+    (wire (path F.Cu 500  168148 -137668  167017 -137668  160540 -131191  158122 -131191
+            156972 -131191)(net +3V3)(type protect))
     (wire (path F.Cu 500  156297 -134620  156297 -135403  157800 -136906)(net +3V3)(type protect))
-    (wire (path F.Cu 500  123571 -102870  123571 -104386  123784 -104599  137303 -104599
-            138644 -103258  138644 -102108)(net +5V)(type protect))
+    (wire (path F.Cu 500  121686 -137249  121686 -145009  122346 -145669  122936 -145669)(net +3V3)(type protect))
+    (wire (path F.Cu 500  124968 -134366  123489 -134366  121686 -136169  121686 -137249
+            122486 -138049  122936 -138049)(net +3V3)(type protect))
+    (wire (path F.Cu 500  152654 -110617  152654 -106300  151792 -105438)(net +3V3)(type protect))
+    (wire (path F.Cu 500  136384 -94309  136384 -99422  133698 -102108  132548 -102108)(net +3V3)(type protect))
+    (wire (path F.Cu 500  157968 -117221  158418 -117221)(net +3V3)(type protect))
+    (wire (path F.Cu 500  134036 -94945.2  132436 -94945.2  128948 -98432.8  128948 -102203
+            126815 -104336  125037 -104336  123571 -102870)(net +5V)(type protect))
+    (wire (path B.Cu 500  138303 -94945.2  138333 -94975.4)(net +5V)(type protect))
+    (wire (path B.Cu 500  134036 -94945.2  138303 -94945.2)(net +5V)(type protect))
+    (wire (path F.Cu 500  138684 -95326.2  138633 -95275.4)(net +5V)(type protect))
+    (wire (path B.Cu 500  138333 -94975.4  138633 -95275.4)(net +5V)(type protect))
+    (wire (path F.Cu 500  138684 -97409  138684 -95326.2)(net +5V)(type protect))
+    (wire (path F.Cu 500  138644 -102108  138644 -107021  139827 -108204)(net +5V)(type protect))
     (wire (path F.Cu 500  138684 -97409  138684 -102068  138644 -102108)(net +5V)(type protect))
-    (wire (path F.Cu 250  158418 -115951  158868 -115951  159493 -115326  159493 -112851
-            159164 -112522  157369 -112522  155956 -112522)(net ESP_GPIO_14)(type protect))
+    (via "Via[0-1]_600:400_um"  138633 -95275.4 (net +5V)(type protect))
+    (via "Via[0-1]_600:400_um"  134036 -94945.2 (net +5V)(type protect))
   )
 )
