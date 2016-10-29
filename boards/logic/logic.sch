@@ -38,7 +38,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Wifi Clock Logic Board"
-Date "2016-09-12"
+Date "2016-10-28"
 Rev "2"
 Comp "Taubman Electronics"
 Comment1 "Drawn by G. Taubman"
